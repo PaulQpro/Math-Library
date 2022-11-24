@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32811.315
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaulQpro.Libraries.Math", "PaulQpro.Libraries.Math\PaulQpro.Libraries.Math.csproj", "{3B298023-AC1C-4D93-86E1-A87FCD691492}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PaulQpro.Libraries.Math", "PaulQpro.Libraries.Math\PaulQpro.Libraries.Math.csproj", "{3B298023-AC1C-4D93-86E1-A87FCD691492}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester", "Tester\Tester.csproj", "{A445257E-4817-4495-AD86-ABB90ADBA269}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tester.App", "Tester.App\Tester.App.csproj", "{5BB8C5AC-F7EB-4B9D-80B1-C75590D2E663}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{3B298023-AC1C-4D93-86E1-A87FCD691492}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B298023-AC1C-4D93-86E1-A87FCD691492}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B298023-AC1C-4D93-86E1-A87FCD691492}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A445257E-4817-4495-AD86-ABB90ADBA269}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A445257E-4817-4495-AD86-ABB90ADBA269}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A445257E-4817-4495-AD86-ABB90ADBA269}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A445257E-4817-4495-AD86-ABB90ADBA269}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5BB8C5AC-F7EB-4B9D-80B1-C75590D2E663}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5BB8C5AC-F7EB-4B9D-80B1-C75590D2E663}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5BB8C5AC-F7EB-4B9D-80B1-C75590D2E663}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5BB8C5AC-F7EB-4B9D-80B1-C75590D2E663}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
