@@ -1,4 +1,5 @@
-﻿#pragma warning disable IDE1006
+﻿using System;
+#pragma warning disable IDE1006
 namespace PaulQpro.Math
 {
     static public partial class Linear
@@ -6,13 +7,12 @@ namespace PaulQpro.Math
         public abstract class BaseVector : BaseMatrix
         {
             public override int[] Dimensions { get; } = new int[1];
-            public bool isZero  { get; protected set; } = false;
             protected virtual double[] VectorValue { get; set; }
             public override string ToString()
             {
-                if (isZero)
+                if (IsZero)
                 {
-                    SetNull();
+                    SetZero();
                 }
                 string returnValue = "{";
                 foreach (var value in VectorValue){
@@ -21,7 +21,7 @@ namespace PaulQpro.Math
                 returnValue = returnValue.TrimEnd(new char[] { ',', ' ' })+"}";
                 return returnValue;
             }
-            public void SetNull()
+            public override void SetZero()
             {
                 for (int ind = 0; ind < Dimensions[0]; ind++)
                 {
@@ -32,7 +32,7 @@ namespace PaulQpro.Math
             {
                 Dimensions[0] = 0;
                 VectorValue = Array.Empty<double>();
-                isZero = true;
+                IsZero = true;
             }
         }
         public class Vector : BaseVector
@@ -40,10 +40,15 @@ namespace PaulQpro.Math
             public Vector(int dimensions, double[] vectorValue)
             {
                 Dimensions[0] = dimensions;
-                if (dimensions == 0 || vectorValue.Sum() == 0)
+                int vv = 0;
+                foreach (var item in vectorValue)
                 {
-                    isZero = true;
-                    SetNull();
+                    vv++;
+                }
+                if (dimensions == 0 || vv == 0)
+                {
+                    IsZero = true;
+                    SetZero();
                 }
                 if (vectorValue.Length != dimensions)
                 {
@@ -66,10 +71,15 @@ namespace PaulQpro.Math
             {
                 Dimensions[0] = vectorValue.Length;
                 VectorValue = vectorValue;
-                if (vectorValue.Length == 0 || vectorValue.Sum() == 0)
+                int vv = 0;
+                foreach (var item in vectorValue)
                 {
-                    isZero = true;
-                    SetNull();
+                    vv++;
+                }
+                if (vectorValue.Length == 0 || vv == 0)
+                {
+                    IsZero = true;
+                    SetZero();
                 }
             }
         }
@@ -80,11 +90,15 @@ namespace PaulQpro.Math
             public double y { get; protected set; }
             public Vector2D(double[] vectorValue)
             {
-                VectorValue = vectorValue;
-                if (vectorValue.Length == 0 || vectorValue.Sum() == 0)
+                int vv = 0;
+                foreach (var item in vectorValue)
                 {
-                    isZero = true;
-                    SetNull();
+                    vv++;
+                }
+                if (vectorValue.Length == 0 || vv == 0)
+                {
+                    IsZero = true;
+                    SetZero();
                 }
                 if (vectorValue.Length != vectorValue.Length)
                 {
@@ -115,10 +129,15 @@ namespace PaulQpro.Math
             public Vector3D(double[] vectorValue)
             {
                 VectorValue = vectorValue;
-                if (vectorValue.Length == 0 || vectorValue.Sum() == 0)
+                int vv = 0;
+                foreach (var item in vectorValue)
                 {
-                    isZero = true;
-                    SetNull();
+                    vv++;
+                }
+                if (vectorValue.Length == 0 || vv == 0)
+                {
+                    IsZero = true;
+                    SetZero();
                 }
                 if (vectorValue.Length != vectorValue.Length)
                 {
