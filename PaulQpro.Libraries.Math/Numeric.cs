@@ -30,10 +30,6 @@ namespace PaulQpro.Math
         {
             return value.Value;
         }
-        static public explicit operator string (UBin8 value)
-        {
-            return value.ToString();
-        }
         static public implicit operator UBin8 (byte value)
         {
             UBin8 bin = new();
@@ -57,7 +53,9 @@ namespace PaulQpro.Math
             }
             return res;
         }
-
+        /// <summary>
+        /// Represents a string value of object : "b--------"
+        /// </summary>
         public override string ToString()
         {
             string result = "b";
