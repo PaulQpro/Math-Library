@@ -7,7 +7,7 @@ namespace PaulQpro.Math
         public class Circle
         {
             private readonly Area _area = new();
-            public Length r { get; set; }
+            public Length r { get; set; } = 1;
             
         }
     }
