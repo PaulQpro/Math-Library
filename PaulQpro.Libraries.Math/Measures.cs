@@ -64,6 +64,7 @@ namespace PaulQpro.Math
                 }
             }
             static public implicit operator Length (double value) => new(value, Units.Length.m);
+            static public implicit operator double (Length value) => value.Value;
         }
         public sealed class Angle
         {
