@@ -11,28 +11,24 @@ namespace PaulQpro.Math
             /// Angle of square, equal to 90° or π/2 radians
             /// </summary>
             public RightAngle A { get; } = new();
-            private Area Area { get; set; }
             public override string ToString()
             {
-                return $"Square : {{Side = {a}, Angle = {A}, Area = {Area}}}";
+                return $"Square : {{Side = {a}, Angle = {A}, Area = {GetArea()}}}";
             }
-            public Area GetArea() => Area;
+            public Area GetArea() => new Area(Pow(a, 2), (Units.Area)(int)a.Unit);
             private Square()
             {
                 this.a = new(1,Units.Length.m);
-                this.Area = new(Pow(1, 2), Units.Area.m2);
             }
             static public Square FromSide(Length a)
             {
                 Square sq = new();
                 sq.a = a;
-                sq.Area = new(Pow(a.Value, 2),(Units.Area)(int)a.Unit);
                 return sq;
             }
             static public Square FromArea(Area area)
             {
                 Square sq = new();
-                sq.Area = area;
                 sq.a = new(Sqrt(Abs(area.Value)), (Units.Length)(int)area.Unit);
                 return sq;
             }
