@@ -5,6 +5,9 @@ namespace PaulQpro.Math
 {
     public static class Numeric
     {
+        /// <summary>
+        /// Represents 8 bit numeric value using 8-units long Boolean array
+        /// </summary>
         public sealed class UBin8
         {
             private bool[] Value { get; set; }
@@ -72,6 +75,9 @@ namespace PaulQpro.Math
 
             private UBin8() { Value = new bool[8]; }
         }
+        /// <summary>
+        /// Represents 4 bit numeric value using 4-units long Boolean array
+        /// </summary>
         public sealed class UBin4
         {
             private bool[] Value { get; set; }
