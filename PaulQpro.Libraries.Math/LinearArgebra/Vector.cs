@@ -1,10 +1,8 @@
 ﻿using System;
 #pragma warning disable IDE1006
-namespace PaulQpro.Math
+namespace PaulQpro.Math.Linear
 {
-    static public partial class Linear
-    {
-        public abstract class BaseVector : BaseMatrix
+    public abstract class BaseVector : BaseMatrix
         {
             public override int[] Dimensions { get; } = new int[1];
             protected virtual double[] VectorValue { get; set; }
@@ -35,7 +33,7 @@ namespace PaulQpro.Math
                 IsZero = true;
             }
         }
-        public class Vector : BaseVector
+    public class Vector : BaseVector
         {
             public Vector(int dimensions, double[] vectorValue)
             {
@@ -83,7 +81,7 @@ namespace PaulQpro.Math
                 }
             }
         }
-        public class Vector2D : BaseVector
+    public class Vector2D : BaseVector
         {
             public override int[] Dimensions { get; } = new int[1] { 2 };
             public double x { get; protected set; }
@@ -138,7 +136,7 @@ namespace PaulQpro.Math
                 this.y = y;
             }
         }
-        public class Vector3D : BaseVector
+    public class Vector3D : BaseVector
         {
             public override int[] Dimensions { get; } = new int[1] { 2 };
             public double x { get; protected set; }
@@ -197,6 +195,5 @@ namespace PaulQpro.Math
                 this.z = z;
             }
         }
-    }
 }
 #pragma warning restore IDE1006

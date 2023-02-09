@@ -1,14 +1,11 @@
-﻿using static PaulQpro.Math.Measures;
+﻿using PaulQpro.Math.Measures;
 using static System.Math;
-namespace PaulQpro.Math
+namespace PaulQpro.Math.Geometry2d
 {
-    public partial class Geometry2d
+    public class Circle
     {
-        public class Circle
-        {
-            //private readonly Area _area = new();
-            //public Length r { get; set; } = 1;
+        //private readonly Area _area = new();
+        //public Length r { get; set; } = 1;
             
-        }
     }
 }
